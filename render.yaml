@@ -1,15 +1,35 @@
 services:
   # A Docker web service
   - type: web
-    name: LazyPrincess
+    name: Autofilter-render
     env: python
     startCommand: python3 bot.py
-    buildCommand: pip3 install -U -r requirements.txt
-    repo: https://github.com/LazyDeveloperr/LazyPrincess.git # optional
+    buildCommand: pip install -r requirements.txt
+    repo: https://github.com/Jot4349/Autofilter-render.git # optional
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
-    branch: main # optional (defaults to master)
+    branch: v10.0__Revised_]_super_prime # optional (defaults to master)
     numInstances: 1 # optional (defaults to 1)
     healthCheckPath: /
-
-#End of yaml
+    envVars:
+      - key: ADMINS
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHANNELS
+        sync: false
+      - key: DATABASE_URI
+        sync: false
+      - key: PICS
+        sync: false
+      - key: LOG_CHANNEL
+        sync: false
+      - key: PYTHON_VERSION
+        sync: false
+      - key: CHNL_LNK
+        sync: false
+        
