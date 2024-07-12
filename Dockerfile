@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /LazyPrincess
-WORKDIR /LazyPrincess
+RUN mkdir /Autofilter-render
+WORKDIR /Autofilter-render
 COPY . .
 CMD ["bash", "start.sh"]
