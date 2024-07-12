@@ -46,7 +46,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # LOG CHANNELS *
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002209172667'))
-LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', 0))
+LAZY_GROUP_LOGS = int(environ.get('LAZY_GROUP_LOGS', '-1002209172667'))
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1002061001421'))
 PRIME_MEMBERS_LOGS = int(environ.get('PRIME_MEMBERS_LOGS', '-1002190807933'))
 
