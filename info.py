@@ -20,8 +20,8 @@ def is_enabled(value, default):
 # Bot information *
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', "21226247"))
-API_HASH = environ('API_HASH', "b8e16404657a8a382cedb928a3b81e0c")
-BOT_TOKEN = environ('BOT_TOKEN', "7347402177:AAHh_v9uu70-0qqUQHGmUYuIDFeug3ENxbo")
+API_HASH = int(environ.get('API_HASH', "b8e16404657a8a382cedb928a3b81e0c"))
+BOT_TOKEN = int(environ.get('BOT_TOKEN', "7347402177:AAHh_v9uu70-0qqUQHGmUYuIDFeug3ENxbo"))
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -40,9 +40,9 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information *
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Jot:jot@cluster0.0vn173k.mongodb.net")
-DATABASE_NAME = environ.get('DATABASE_NAME', "LazyDeveloper")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = int(environ.get('DATABASE_URI', "mongodb+srv://Jot:jot@cluster0.0vn173k.mongodb.net"))
+DATABASE_NAME = int(environ.get('DATABASE_NAME', "LazyDeveloper"))
+COLLECTION_NAME = int(environ.get('COLLECTION_NAME', 'Telegram_files'))
 
 # LOG CHANNELS *
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1002209172667"))
@@ -57,8 +57,8 @@ lazy_renamers = [int(lazrenamers) if id_pattern.search(lazrenamers) else lazrena
 LAZY_RENAMERS = (lazy_renamers + ADMINS) if lazy_renamers else [] #Add user id of the user in this field those who you want to be Authentic user for file renaming features
 LZURL_PRIME_USERS = [int(lazyurlers) if id_pattern.search(lazyurlers) else lazyurlers for lazyurlers in environ.get('LZURL_PRIME_USERS', '5965340120').split()]
 
-QR_CODE_IMG = environ.get('QR_CODE_IMG','https://telegra.ph/file/ca18e2c794f4ea1c3135b.jpg') #add url link of your qr code to recieve money - use telegraph bot or other source to get image
-UPI_ID = environ.get('UPI_ID', 'lazydeveloper@ybl') #enter your upi id here - grab it from your online payment methods.
+QR_CODE_IMG = int(environ.get('QR_CODE_IMG','https://telegra.ph/file/ca18e2c794f4ea1c3135b.jpg')) #add url link of your qr code to recieve money - use telegraph bot or other source to get image
+UPI_ID = int(environ.get('UPI_ID', 'lazydeveloper@ybl')) #enter your upi id here - grab it from your online payment methods.
 
 # Others
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/real_MoviesAdda3/186') # Tutorial video link for opening shortlink website 
